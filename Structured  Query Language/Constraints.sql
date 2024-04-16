@@ -54,3 +54,22 @@ INSERT INTO student(age,rollno)
 VALUES (33,1),
 (12,3);
 
+-- foreign key 
+CREATE DATABASE IF NOT EXISTS college;
+USE college;
+CREATE TABLE IF NOT EXISTS student(
+age INT,
+rollno INT PRIMARY KEY
+);
+INSERT INTO student(age,rollno)
+VALUES (33,1),
+(12,3);
+
+CREATE TABLE course(
+coursrname VARCHAR(50),
+rollno INT,
+FOREIGN KEY (rollno) REFERENCES student(rollno)
+);
+DROP DATABASE college;
+
+
