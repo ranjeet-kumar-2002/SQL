@@ -73,3 +73,21 @@ FOREIGN KEY (rollno) REFERENCES student(rollno)
 DROP DATABASE college;
 
 
+***************************************************************************************
+CREATE DATABASE IF NOT EXISTS college;
+USE college;
+CREATE TABLE IF NOT EXISTS student(
+id INT PRIMARY KEY,
+name VARCHAR(50)
+);
+
+CREATE TABLE course(
+coursrname VARCHAR(50),
+id INT,
+FOREIGN KEY (id) REFERENCES student(id)
+);
+DROP DATABASE college;
+
+
+
+
